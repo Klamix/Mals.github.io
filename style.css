@@ -1,0 +1,37 @@
+/* Начальный вид кнопки */
+
+/* Настраиваем родительский контейнер (весь экран) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f6fa;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color: dimgrey;
+    box-shadow: 0px 2px 15px rgb(5, 5, 5, 0.7);
+    width: 97vw;
+    margin: 10px auto 0 auto;
+}
+
+.menu-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #3498db;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color:  #256e9e;
+    transform: scale(1.05);
+}
