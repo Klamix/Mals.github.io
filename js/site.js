@@ -20,7 +20,7 @@ button.addEventListener('click', function () {
 
     const name = name_imp.value;
     const pass = pass_imp.value;
-    if (name == "") {
+    if (name == "Яна") {
         reg.classList.add("closed");
         setTimeout(() => reg.remove(), 1400);
         friends.classList.add('visible')

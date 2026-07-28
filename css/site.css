@@ -162,6 +162,7 @@ body {
     align-items: center;
     border-radius: 30px;
     overflow: hidden;
+    justify-content: flex-start;
     backdrop-filter: blur(100px);
     box-shadow: 0px 19px 30px -8px rgba(160, 68, 209, 0.75);
     transition: transform 0.7s ease;
@@ -169,7 +170,7 @@ body {
 
 .image_in {
     margin-top: 20px;
-    height: 25%;
+    height: 30%;
     aspect-ratio: 1/1;
     border-radius: 18px;
     flex-shrink: 0;
@@ -182,7 +183,7 @@ body {
 
 .text_po {
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 5px;
     margin-left: 5px;
     font-family: "Comfortaa";
@@ -192,6 +193,24 @@ body {
     overflow-wrap: break-word;
     font-weight: 700;
     font-size: 19px;
+    color: #FF8FFF;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    line-height: 1;
+}
+
+.text_por {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-family: "Comfortaa";
+    display: -webkit-box;
+    -webkit-line-clamp: 15; /* сколько строк показывать */
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    font-size: 14px;
     color: #FF8FFF;
     text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
     text-align: center;
@@ -210,4 +229,34 @@ body {
     left: 10px;
     border-radius: 10px
 
+}
+
+.lilit {
+    position: absolute;
+    width: 7%;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 10px
+
+}
+
+
+#egor {
+    height: 500px;
+}
+#alisa {
+    height: 425px;
+
+}
+
+#yura {
+    height: 300px;
+}
+
+#tim {
+    height: 485px;
+}
+
+#nikita {
+    height: 350px;
 }
