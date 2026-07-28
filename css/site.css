@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(160deg, #1a1a2e 0%, #533483 100%);
+    min-height: 100vh
+}
+
+.topbar {
+    display: flex;
+    width: 90%;
+    font-size: 31px;
+    font-family: Arial;
+    height: 60px; /* Задаем высоту блока */
+    background: #e9abff;
+    background: linear-gradient(163deg, rgba(233, 171, 255, 1) 0%, rgba(140, 71, 145, 1) 100%);
+    color: #ffffff; /* Цвет текста (чтобы букву 'd' было видно) */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center;
+    border-radius: 18px;
+    padding-top: 0px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 15px auto auto auto;
+}
+
+.regtext { /* Текст над регом */
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI';
+    color: pink;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 10px #6E3D6E;
+    font-size: 24px;
+}
+
+.register-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 15px auto;
+    width: 90%;
+    background: #e9abff;
+    background: linear-gradient(163deg, rgba(233, 171, 255, 1) 0%, rgba(140, 71, 145, 1) 100%);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px hidden;
+    box-shadow: -1px 0px 30px 0px rgba(95, 14, 120, 0.3);
+    transition: all 0.5s ease;
+}
+
+.ramka {
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    line-height: 50px;
+    height: 60px;
+    width: 98%;
+    padding: 0 10px;
+    background: #2b2b2b;
+    background: linear-gradient(0deg, rgba(43, 43, 43, 0.41) 0%, rgba(10, 10, 10, 0.41) 100%);
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    transition: all 0.5s ease;
+    color: pink;
+}
+
+.buttonk {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 90%;
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    font-weight: 700;
+    background: #2b2b2b;
+    background: linear-gradient(0deg, rgba(43, 43, 43, 0.41) 0%, rgba(10, 10, 10, 0.41) 100%);
+    transition: all 0.5s ease;
+    color: pink;
+    
+}
+
+/*Анимации и переходы */
+
+.ramka:focus::placeholder {
+    transition: all 0.5s ease;
+    opacity: 0;
+    color: pink;
+}
+
+.ramka::placeholder {
+    transition: all 0.5s ease;
+    opacity: 0.8;
+    color: pink;
+}
+
+.register-top:hover {
+    transform: scale(1.02, 1.02);
+}
+
+.register-top.closed {
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: close 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes close {
+    0% {opacity: 1; transform: translateY(0)}
+    25% {transform: translateY(25px)}
+    100% {opacity: 0; transform: translateY(-75px)}
+}
+
+.ramka:hover {
+    transform: scale(1.02, 1.02);
+}
+.buttonk:hover {
+    transform: scale(1.005);
+}
+
+.buttonk:active {
+    transition: transform 0.2s ease;
+    transform: scale(0.99)
+}
+
+.ramka:focus {
+    color: lightpink;
+}
+
+.friends {
+    display: flex;
+    opacity: 0;
+    transition: opacity 2.5s ease;
+    margin: 15px auto auto auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+.friends.visible {
+    opacity: 1;
+}
+
+.friend {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 500px;
+    flex-direction: column;
+    max-width: 90%;
+    background: #9c679c;
+    background: linear-gradient(163deg, rgba(156, 103, 156, 1) 0%, rgba(248, 147, 250, 1) 100%);
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 19px 30px -8px rgba(160, 68, 209, 0.75);
+    transition: transform 0.7s ease;
+}
+
+.image_in {
+    margin-top: 20px;
+    height: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 18px;
+    flex-shrink: 0;
+    border: 4px solid rgba(255,255,255,0.5);
+}
+
+.friend:hover {
+    transform: scale(1.03)
+}
+
+.text_po {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-family: "Comfortaa";
+    display: -webkit-box;
+    -webkit-line-clamp: 15; /* сколько строк показывать */
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    font-size: 19px;
+    color: #FF8FFF;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    line-height: 1;
+}
+
+.friend.disable {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lili {
+    position: absolute;
+    width: 18%;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 10px
+
+}
