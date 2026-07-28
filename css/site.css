@@ -191,8 +191,7 @@ body {
     margin-bottom: 15px;
     font-family: "Comfortaa";
     display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 15; /* сколько строк показывать */
+    -webkit-line-clamp: 999; /* сколько строк показывать */
     -webkit-box-orient: vertical;
     overflow-wrap: break-word;
     font-weight: 700;
@@ -204,7 +203,6 @@ body {
 }
 
 .text_por {
-    overflow: hidden;
     display: flex;
     min-height: 0;
     margin-top: 10px;
@@ -213,7 +211,7 @@ body {
     margin-bottom: 20px;
     font-family: "Comfortaa";
     display: -webkit-box;
-    -webkit-line-clamp: 15; /* сколько строк показывать */
+    -webkit-line-clamp: 999; /* сколько строк показывать */
     -webkit-box-orient: vertical;
     overflow-wrap: break-word;
     font-weight: 700;
@@ -242,7 +240,7 @@ body {
 
 .lilit {
     
-    max-width: 10%;
+    max-width: 20%;
     aspect-ratio: 1 / 1;
     margin-bottom: 2%;
     flex-shrink: 1;
