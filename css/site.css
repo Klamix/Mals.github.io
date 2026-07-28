@@ -151,10 +151,12 @@ body {
 }
 
 .friend {
+    min-width: 0;
     position: relative;
+    flex-shrink: 1;
     display: flex;
     width: 90%;
-    height: 500px;
+    height: fit-content;
     flex-direction: column;
     max-width: 90%;
     background: #9c679c;
@@ -170,10 +172,9 @@ body {
 
 .image_in {
     margin-top: 20px;
-    height: 30%;
+    height: 10vh;
     aspect-ratio: 1/1;
     border-radius: 18px;
-    flex-shrink: 0;
     border: 4px solid rgba(255,255,255,0.5);
 }
 
@@ -183,11 +184,14 @@ body {
 
 .text_po {
     display: flex;
-    margin-top: 30px;
+    min-height: 0;
+    margin-top: 10px;
     margin-right: 5px;
     margin-left: 5px;
+    margin-bottom: 15px;
     font-family: "Comfortaa";
     display: -webkit-box;
+    overflow: hidden;
     -webkit-line-clamp: 15; /* сколько строк показывать */
     -webkit-box-orient: vertical;
     overflow-wrap: break-word;
@@ -200,10 +204,13 @@ body {
 }
 
 .text_por {
+    overflow: hidden;
     display: flex;
-    margin-top: 20px;
+    min-height: 0;
+    margin-top: 10px;
     margin-right: 5px;
     margin-left: 5px;
+    margin-bottom: 20px;
     font-family: "Comfortaa";
     display: -webkit-box;
     -webkit-line-clamp: 15; /* сколько строк показывать */
@@ -223,40 +230,25 @@ body {
 }
 
 .lili {
-    position: absolute;
-    width: 18%;
-    bottom: 10px;
-    left: 10px;
-    border-radius: 10px
+    max-width: 20%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 2%;
+    
+    border-radius: 10px;
+    flex-shrink: 1;
+    min-width: 0;
 
 }
 
 .lilit {
-    position: absolute;
-    width: 7%;
-    bottom: 10px;
-    left: 10px;
-    border-radius: 10px
+    
+    max-width: 10%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 2%;
+    flex-shrink: 1;
+    border-radius: 10px;
+    min-width: 0;
 
 }
 
 
-#egor {
-    height: 500px;
-}
-#alisa {
-    height: 425px;
-
-}
-
-#yura {
-    height: 300px;
-}
-
-#tim {
-    height: 485px;
-}
-
-#nikita {
-    height: 350px;
-}
